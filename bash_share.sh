@@ -4,7 +4,8 @@
 #echo "LA" | nc -u 192.168.63.255 45454
 
 if [[ $# -eq 0 ]]; then
-	echo "Usage: bash_share.sh"
+	echo "Usage: bash_share.sh rc - receive file"
+	echo "       bash_share.sh file/path - send file"
 	exit 0
 fi
 

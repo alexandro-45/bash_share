@@ -3,8 +3,9 @@
 PORT=45454
 
 print_usage() {
-	echo "Usage: bash_share.sh <rc> - receive file"
-	echo "       bash_share.sh <IP> </file/path> - send file"
+	echo "Usage: bash_share install - install in /usr/bin"
+	echo "       bash_share rc - receive file"
+	echo "       bash_share <IP> </file/path> - send file"
 	exit 0
 }
 
@@ -12,7 +13,12 @@ if [[ $# -eq 0 ]]; then
 	print_usage
 fi
 
-if [[ $1 == "rc" ]]; then
+if [[ $1 == "install" ]]; then
+	echo "Installing in /usr/bin/"
+	sudo cp bash_share /usr/bin/bash_share && \
+	sudo chmod 755 /usr/bin/bash_share && \
+	echo "Script installed!"
+elif [[ $1 == "rc" ]]; then
 	echo "Listen for incoming file..."
 	filename=$(nc -l -p $PORT)
 	echo "Filename: $filename"

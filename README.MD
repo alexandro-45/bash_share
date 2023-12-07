@@ -3,9 +3,9 @@ A simple bash script for sharing files on a local network using netcat.
 # Usage:
 
 ```
-bash_share install - install in /usr/bin"
-bash_share rc - receive file"
-bash_share <IP> </file/path> - send file"
+bash_share install - install in /usr/bin
+bash_share rc - receive file
+bash_share <IP> </file/path> - send file
 ```
 
 # Automatic download and install in /usr/bin

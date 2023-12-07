@@ -1,4 +1,4 @@
-A simple bash script for sharing files on a local network.
+A simple bash script for sharing files on a local network using netcat.
 
 # Usage:
 
